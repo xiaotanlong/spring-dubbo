@@ -12,6 +12,7 @@
         <module>spring-provider</module>
         <module>spring-consumer</module>
         <module>springboot-dubbo-api</module>
+		
     </modules>
 
 
