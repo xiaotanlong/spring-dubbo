@@ -18,7 +18,7 @@
     <!-- 暴露服务 -->
     <dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}" />
 
-    <bean id="axempleService" class="com.dubbo.provide.service.impl.ExampleServiceImpl"></bean>
+    <!--<bean id="axempleService" class="com.dubbo.provide.service.impl.ExampleServiceImpl"></bean>-->
     <dubbo:service interface="com.dubbo.service.ExampleService"
                    ref="axempleService" retries="0" timeout="6000" />
 </beans>

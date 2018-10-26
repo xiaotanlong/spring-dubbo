@@ -1,6 +1,7 @@
 package com.dubbo.web;
 
 import com.dubbo.service.ExampleService;
+import com.dubbo.session.UserSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,6 +23,7 @@ public class TestController {
 
     @RequestMapping(value = "queryName", method = RequestMethod.GET)
     String queryName(){
+        UserSession.set("usersession","我是用户信息-pro");
         return exampleService.getName("tt");
     }
 
