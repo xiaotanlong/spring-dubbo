@@ -15,24 +15,53 @@
         <module>springboot-dubbo-api</module>
         <module>springboot-dubbo-consume</module>
         <module>springboot-dubbo-provide</module>
+        <module>springboot-dubbo-web</module>
+        <module>springboot-common-service</module>
+        <module>springboot-common-web</module>
+        <module>springboot-common-util</module>
+        <module>springboot-common-all</module>
     </modules>
 
     <properties>
-        <com.alibaba.dubbo.version>2.5.3</com.alibaba.dubbo.version>
+        <com.alibaba.dubbo.version>2.6.2</com.alibaba.dubbo.version>
+        <commons-lang3.version>2.6.2</commons-lang3.version>
+        <org.apache.zookeeper.version>3.4.6</org.apache.zookeeper.version>
+        <com.github.sgroschupf.zkclient.version>0.1</com.github.sgroschupf.zkclient.version>
     </properties>
 
-    <dependencies>
-    <!-- dubbo -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo</artifactId>
-            <exclusions><!-- 排除依赖的意思-->
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring</artifactId>
-                </exclusion>
-            </exclusions>
-            <version>${com.alibaba.dubbo.version}</version>
-        </dependency>
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <!-- dubbo -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <exclusions><!-- 排除依赖的意思-->
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring</artifactId>
+                    </exclusion>
+                </exclusions>
+                <version>${com.alibaba.dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${org.apache.zookeeper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.sgroschupf</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${com.github.sgroschupf.zkclient.version}</version>
+            </dependency>
+            <!-- dubbo end-->
+
+            <!-- 工具包 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 </project>

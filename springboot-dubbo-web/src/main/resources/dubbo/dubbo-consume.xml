@@ -10,15 +10,8 @@
     <dubbo:application name="${dubbo.application.name}" />
 
     <!-- 注册中心暴露服务地址 -->
-    <!-- <dubbo:registry address="multicast://224.5.6.7:1234" /> -->
-
-    <!-- <dubbo:registry protocol="zookeeper" address="10.170.219.98:2181,10.173.55.173:2181" /> -->
     <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}" />
 
-    <!-- 暴露服务 -->
-    <dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}" />
-
-    <!--<bean id="axempleService" class="ExampleServiceImpl"></bean>-->
-    <dubbo:service interface="com.service.ExampleService"
-                   ref="exempleService" retries="0" timeout="6000" />
+    <!-- 要使用的服务（有provide 向 zookeep注册的） -->
+    <dubbo:reference id="xempleService" interface="com.service.ExampleService" />
 </beans>

@@ -46,6 +46,11 @@
 		<!-- 提供消费接口的中间 模块 -->
 		<dependency>
 			<groupId>spring-dubbo</groupId>
+			<artifactId>springboot-common-all</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>spring-dubbo</groupId>
 			<artifactId>springboot-dubbo-api</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>

@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springboot-dubbo-api</artifactId>
+    <artifactId>springboot-common-all</artifactId>
     <dependencies>
         <!-- 工具包 -->
         <dependency>
@@ -23,4 +23,5 @@
         </dependency>
 
     </dependencies>
+
 </project>

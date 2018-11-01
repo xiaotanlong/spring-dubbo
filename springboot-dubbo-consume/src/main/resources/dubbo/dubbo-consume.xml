@@ -13,5 +13,5 @@
     <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}" />
 
     <!-- 要使用的服务（有provide 向 zookeep注册的） -->
-    <dubbo:reference id="axempleService" interface="com.dubbo.service.ExampleService" />
+    <dubbo:reference id="exampleService" interface="com.service.ExampleService" />
 </beans>

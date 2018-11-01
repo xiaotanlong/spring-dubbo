@@ -1,0 +1,2 @@
+consumerFilter=com.common.filter.ConsumerFilter
+providerFilter=com.common.filter.ProviderFilter
