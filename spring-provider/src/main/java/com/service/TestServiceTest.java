@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @ProjectName spring-dubbo
  * @PackageName com.dubbo.service
- * @Author tanjianglong
+ * @Author xiaotantjl@163.com
  * @CreatedTime 2017/10/26.
  * @Description :Plase give some message
  * 修改记录：1...;2....

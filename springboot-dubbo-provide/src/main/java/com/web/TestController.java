@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @ProjectName spring-dubbo
  * @PackageName com.dubbo.web
- * @Author tanjianglong
+ * @Author xiaotantjl@163.com
  * @CreatedTime 2017/10/26.
  * @Description :Plase give some message
- * 修改记录：1...;2....
+ * 修改记录：1.dubbo服务本身也可以暴露接口   不过如果要水平分层的话  这边就不需要这个  Controller
  */
 @RestController
 @RequestMapping(value = "/test2")

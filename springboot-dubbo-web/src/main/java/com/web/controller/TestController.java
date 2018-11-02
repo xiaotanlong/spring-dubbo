@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * @ProjectName spring-dubbo
  * @PackageName com.dubbo.web
- * @Author tanjianglong
+ * @Author xiaotantjl@163.com
  * @CreatedTime 2017/10/26.
  * @Description :Plase give some message
  * 修改记录：

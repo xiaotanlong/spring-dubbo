@@ -1,7 +1,7 @@
 package com.web;
 
+import com.common.session.UserSession;
 import com.service.ExampleService;
-import com.session.UserSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @ProjectName spring-dubbo
  * @PackageName com.dubbo.web
- * @Author tanjianglong
+ * @Author xiaotantjl@163.com
  * @CreatedTime 2017/10/26.
  * @Description :Plase give some message
  * 修改记录：前后端分离的  接口暴露层   Controller （只负责接口暴露    具体的服务提供方根据业务量还部署 集群)
