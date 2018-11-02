@@ -18,7 +18,6 @@ import java.util.Map;
  *
  * 注：这个只能传递在 Controller  和  service  之间  分布式服务  获取不到
  */
-@SuppressWarnings("unchecked")
 public class UserSession {
     /** * 保存变量的ThreadLocal，保持在同一线程中同步数据. */
     private static final ThreadLocal<Map<Object, Object>> SESSION_MAP = new ThreadLocal();
