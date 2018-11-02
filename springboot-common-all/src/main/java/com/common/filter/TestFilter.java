@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * @author 0217319
  * @version V1.0
- * @Description: (用一句话描述该文件做什么)
+ * @Description: servlet 过滤器
  * @date 2018/11/2 12:18
  */
 @WebFilter
