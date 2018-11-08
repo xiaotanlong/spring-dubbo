@@ -13,7 +13,13 @@ import java.util.List;
 /**
  * @author 0217319
  * @version V1.0
- * @Description: (用一句话描述该文件做什么)
+ * @Description: 自定义的路由规则  也可以通过自定义负载规则  来实现指定服务选举
+ *
+ * 读写分离思想  拦截rpc请求 根据方法名  指定到不同的ip服务
+ * 注：另外还有两点需要注意
+    1. 如果有多条routers规则，那么会根据每一条routers来过滤出可调用的provider列表
+    2. 针对条件路由，当经过某条路由规则路由后，没有一个符合规则的Provider，
+    那么此次路由失败，会直接返回路由本条规则前的所有Provider，也就是相当于没有经过该路由的结果。
  * @date 2018/11/8 18:02
  */
 public class MyRouter implements Router {
