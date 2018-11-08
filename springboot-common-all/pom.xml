@@ -34,6 +34,12 @@
             <artifactId>dubbo</artifactId>
         </dependency>
 
+        <!-- zk cli -->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
