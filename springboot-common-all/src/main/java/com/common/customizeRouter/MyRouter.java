@@ -19,6 +19,9 @@ import java.util.List;
 public class MyRouter implements Router {
     private URL url;
 
+    public MyRouter(URL url){
+        this.url = url;
+    }
     @Override
     public URL getUrl() {
         return this.url;

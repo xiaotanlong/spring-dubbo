@@ -13,6 +13,6 @@ import com.alibaba.dubbo.rpc.cluster.RouterFactory;
 public class MyRouterFactory implements RouterFactory {
     @Override
     public Router getRouter(URL url) {
-        return null;
+        return new MyRouter(url);
     }
 }
