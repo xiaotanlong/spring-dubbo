@@ -1,8 +1,10 @@
 package com.main;
 
+import com.common.filter.TestFilter;
 import com.common.listener.WebContextListener;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
 
@@ -32,5 +34,14 @@ import org.springframework.context.annotation.*;
 public class SpringbootBootWebApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootBootWebApplication.class, args);
+	}
+
+	@Bean
+	public FilterRegistrationBean testFilterRegistration() {
+		FilterRegistrationBean registration = new FilterRegistrationBean(new TestFilter());
+		registration.addUrlPatterns("/*"); //
+		registration.addInitParameter("paramName", "paramValue"); //
+		registration.setName("testFilter");
+		return registration;
 	}
 }

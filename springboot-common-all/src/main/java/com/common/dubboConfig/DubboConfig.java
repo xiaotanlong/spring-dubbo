@@ -32,12 +32,12 @@ public class DubboConfig {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        // String zkServerPath = "127.0.0.1:2181";
-        String zkServerPath = "192.168.16.203:2181";
-        List<String> paths = lookup(zkServerPath, "/trade");
+        String zkServerPath = "127.0.0.1:2181";
+        //String zkServerPath = "192.168.16.203:2181";
+        List<String> paths = lookup(zkServerPath, "/dubbo");
         paths.forEach(System.out::println);
 
-        paths.forEach(path -> deleteAll(zkServerPath, String.format("/trade/%s/routers", path)));
+        paths.forEach(path -> deleteAll(zkServerPath, String.format("/dubbo/%s/routers", path)));
 
         register(paths, zkServerPath);
     }
@@ -79,12 +79,12 @@ public class DubboConfig {
     public static void register(List<String> paths, String zkServerPath) {
         RegistryFactory registryFactory =
                 ExtensionLoader.getExtensionLoader(RegistryFactory.class).getAdaptiveExtension();
-        Registry registry = registryFactory.getRegistry(URL.valueOf("zookeeper://" + zkServerPath + "?group=trade"));
+        Registry registry = registryFactory.getRegistry(URL.valueOf("zookeeper://" + zkServerPath + "?group=dubbo"));
         paths.forEach(path -> {
-            registry.unregister(URL.valueOf("routers://0.0.0.0/" + path + "?name=gray"
-                    + "&category=routers&router=grayscaleRouter&dynamic=false&version=1.0&runtime=true"));
-            registry.register(URL.valueOf("routers://0.0.0.0/" + path + "?name=gray"
-                    + "&category=routers&router=grayscaleRouter&dynamic=false&version=1.0&runtime=true"));
+            registry.unregister(URL.valueOf("routers://0.0.0.0/" + path + "?name=my"
+                    + "&category=routers&router=myRouter&dynamic=false&version=1.0&runtime=true"));
+            registry.register(URL.valueOf("routers://0.0.0.0/" + path + "?name=my"
+                    + "&category=routers&router=myRouter&dynamic=false&version=1.0&runtime=true"));
         });
     }
 

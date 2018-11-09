@@ -22,7 +22,7 @@ import java.util.List;
     那么此次路由失败，会直接返回路由本条规则前的所有Provider，也就是相当于没有经过该路由的结果。
  * @date 2018/11/8 18:02
  */
-public class MyRouter implements Router {
+public class MyRouter implements Router,Comparable<Router> {
     private URL url;
 
     public MyRouter(URL url){
@@ -41,7 +41,7 @@ public class MyRouter implements Router {
         if (ip == null) {
             ip = System.getProperty("dubbo.protocol.host");
         }
-
+        System.out.println("自定义的路由==================");
         if(ip == null){
             return excludeLocalService(invokers);
         }else{
