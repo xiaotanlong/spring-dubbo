@@ -10,8 +10,8 @@
     <dubbo:application name="${dubbo.application.name}" />
 
     <!-- 注册中心暴露服务地址 -->
-    <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}" />
+    <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}" group="${zk.serviceGroup:tjlDubbo}" />
 
     <!-- 要使用的服务（有provide 向 zookeep注册的） -->
-    <dubbo:reference id="xempleService" interface="com.service.ExampleService" />
+    <dubbo:reference id="xempleService" interface="com.service.ExampleService" group="tjlLocal" protocol="dubbo"/>
 </beans>

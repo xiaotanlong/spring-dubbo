@@ -22,8 +22,7 @@ import java.util.List;
 @Component
 public class DubboConfig {
 
-
-    static Logger logger = LoggerFactory.getLogger(DubboConfig.class);
+    //static Logger logger = LoggerFactory.getLogger(DubboConfig.class);
 
     /**
      * 添加路由规则
@@ -54,7 +53,7 @@ public class DubboConfig {
         try {
             zkClient.delete().guaranteed().deletingChildrenIfNeeded().forPath(path);
         } catch (Exception e) {
-            logger.error(e.getMessage(), e);
+            //logger.error(e.getMessage(), e);
         }
     }
 

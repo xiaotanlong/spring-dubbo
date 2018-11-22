@@ -24,14 +24,15 @@
             <artifactId>spring-webmvc</artifactId>
         </dependency>
         <!-- 工具包 -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-        </dependency>
-        <!-- RocContext 相关 -->
+        </dependency>-->
+        <!-- RocContext 相关  provided  编译期-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <!-- zk cli -->
@@ -44,7 +45,10 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.12</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
