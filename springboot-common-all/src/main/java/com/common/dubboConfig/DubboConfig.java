@@ -33,10 +33,10 @@ public class DubboConfig {
     public static void main(String[] args) throws Exception {
         String zkServerPath = "127.0.0.1:2181";
         //String zkServerPath = "192.168.16.203:2181";
-        List<String> paths = lookup(zkServerPath, "/dubbo");
+        List<String> paths = lookup(zkServerPath, "/tjlDubbo");
         paths.forEach(System.out::println);
 
-        paths.forEach(path -> deleteAll(zkServerPath, String.format("/dubbo/%s/routers", path)));
+        paths.forEach(path -> deleteAll(zkServerPath, String.format("/tjlDubbo/%s/routers", path)));
 
         register(paths, zkServerPath);
     }
@@ -78,7 +78,7 @@ public class DubboConfig {
     public static void register(List<String> paths, String zkServerPath) {
         RegistryFactory registryFactory =
                 ExtensionLoader.getExtensionLoader(RegistryFactory.class).getAdaptiveExtension();
-        Registry registry = registryFactory.getRegistry(URL.valueOf("zookeeper://" + zkServerPath + "?group=dubbo"));
+        Registry registry = registryFactory.getRegistry(URL.valueOf("zookeeper://" + zkServerPath + "?group=tjlDubbo"));
         paths.forEach(path -> {
             registry.unregister(URL.valueOf("routers://0.0.0.0/" + path + "?name=my"
                     + "&category=routers&router=myRouter&dynamic=false&version=1.0&runtime=true"));
