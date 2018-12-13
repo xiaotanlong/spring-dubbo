@@ -1,0 +1,3 @@
+在项目中运行  mybatis-generator  插件
+1.MybatisSpringTest  执行main方法
+2.maven 插件执行-》   mybatis-generator:generate

@@ -20,6 +20,7 @@
         <module>springboot-common-web</module>
         <module>springboot-common-util</module>
         <module>springboot-common-all</module>
+        <module>mybatis-quick-start</module>
     </modules>
 
     <properties>
