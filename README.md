@@ -15,3 +15,6 @@ common-service 公共的service
 common-web   web层  和接口服务  使用的拦截机制
 
 common-util    工具包
+
+
+# mybatis 开头是 mybatis 相关

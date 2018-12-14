@@ -1,7 +1,11 @@
 package com.enjoylearning.mybatis.entity;
 
+import java.io.Serializable;
+import java.util.List;
 
-public class TUser {
+import org.apache.ibatis.annotations.Param;
+
+public class TUser implements Serializable{
     private Integer id;
 
     private String userName;
@@ -16,9 +20,24 @@ public class TUser {
 
     private String note;
 
-    private Integer positionId;
+    private TPosition position;
+    
+    private List<TJobHistory> jobs ;
+    
+    private List<HealthReport> healthReports;
+
+    
+    private List<TRole> roles;
+/*    
+	public TUser(Integer id, String userName) {
+		super();
+		this.id = id;
+		this.userName = userName;
+	}
+	*/
     
 
+    
     
 
 
@@ -50,7 +69,15 @@ public class TUser {
         return sex;
     }
 
-    public void setSex(Byte sex) {
+    public TPosition getPosition() {
+		return position;
+	}
+
+	public void setPosition(TPosition position) {
+		this.position = position;
+	}
+
+	public void setSex(Byte sex) {
         this.sex = sex;
     }
 
@@ -78,20 +105,46 @@ public class TUser {
         this.note = note;
     }
 
-    public Integer getPositionId() {
-        return positionId;
-    }
+   
 
-    public void setPositionId(Integer positionId) {
-        this.positionId = positionId;
-    }
-    
+	public List<TJobHistory> getJobs() {
+		return jobs;
+	}
+
+	public void setJobs(List<TJobHistory> jobs) {
+		this.jobs = jobs;
+	}
+	
+	
+
+	public List<HealthReport> getHealthReports() {
+		return healthReports;
+	}
+
+	public void setHealthReports(List<HealthReport> healthReports) {
+		this.healthReports = healthReports;
+	}
+	
+	
+
+	public List<TRole> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<TRole> roles) {
+		this.roles = roles;
+	}
 
 	@Override
 	public String toString() {
+		String positionId=  (position == null ? "" : String.valueOf(position.getId()));
 		return "TUser [id=" + id + ", userName=" + userName + ", realName="
 				+ realName + ", sex=" + sex + ", mobile=" + mobile + ", email="
 				+ email + ", note=" + note + ", positionId=" + positionId + "]";
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(1<<2);
 	}
 
 	
