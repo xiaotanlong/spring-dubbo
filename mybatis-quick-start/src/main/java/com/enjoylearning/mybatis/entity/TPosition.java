@@ -40,4 +40,13 @@ public class TPosition {
     public void setNote(String note) {
         this.note = note;
     }
+
+    @Override
+    public String toString() {
+        return "TPosition{" +
+                "id=" + id +
+                ", postName='" + postName + '\'' +
+                ", note='" + note + '\'' +
+                '}';
+    }
 }

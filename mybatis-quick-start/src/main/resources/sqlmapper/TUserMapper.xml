@@ -30,7 +30,8 @@
 	</resultMap>
 
 	<resultMap id="userAndPosition2" extends="BaseResultMap" type="TUser">
-		<association property="position" fetchType="lazy"  column="position_id" select="com.enjoylearning.mybatis.mapper.TPositionMapper.selectByPrimaryKey" />
+		<association property="position" fetchType="lazy"  column="position_id"
+					 select="com.enjoylearning.mybatis.mapper.TPositionMapper.selectByPrimaryKey" />
 	</resultMap>
 
 
