@@ -3,11 +3,9 @@ package com.enjoylearning.mybatis.mapper;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.ibatis.annotations.Param;
-
-import com.enjoylearning.mybatis.entity.EmailSexBean;
-import com.enjoylearning.mybatis.entity.TJobHistory;
 import com.enjoylearning.mybatis.entity.TUser;
+import com.enjoylearning.mybatis.entity.EmailSexBean;
+import org.apache.ibatis.annotations.Param;
 
 public interface TUserMapper {
 	

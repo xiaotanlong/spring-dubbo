@@ -4,17 +4,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+import com.enjoylearning.mybatis.entity.TUser;
+import com.enjoylearning.mybatis.mapper.TUserMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Before;
 import org.junit.Test;
-
-import com.enjoylearning.mybatis.entity.THealthReportFemale;
-import com.enjoylearning.mybatis.entity.TUser;
-import com.enjoylearning.mybatis.mapper.THealthReportFemaleMapper;
-import com.enjoylearning.mybatis.mapper.TUserMapper;
 
 public class AssociationQueryTest {
 	

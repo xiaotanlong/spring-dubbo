@@ -9,9 +9,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Test;
-
 import com.enjoylearning.mybatis.entity.TUser;
+import org.junit.Test;
 
 public class JdbcDemo {
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";

@@ -2,10 +2,9 @@ package com.enjoylearning.mybatis.mapper;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
-
 import com.enjoylearning.mybatis.entity.TJobHistory;
 import com.enjoylearning.mybatis.entity.TUser;
+import org.apache.ibatis.annotations.Param;
 
 public interface TJobHistoryMapper {
     int deleteByPrimaryKey(Integer id);

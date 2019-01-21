@@ -45,7 +45,7 @@
 		</dependency>
 
 
-		<!-- mybatis相关依赖 -->
+		<!-- mybatis相关依赖  @Param  需要使用-->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>

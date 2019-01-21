@@ -43,7 +43,7 @@
 	</mappers>
 
 
-	<!--  <mapper class="com.enjoylearning.mybatis.mapper.TJobHistoryAnnoMapper"/>
+	<!--  <mapper class="TJobHistoryAnnoMapper"/>
         </mappers> -->
 
 </configuration>  

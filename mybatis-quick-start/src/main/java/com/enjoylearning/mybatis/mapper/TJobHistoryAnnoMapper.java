@@ -2,16 +2,13 @@ package com.enjoylearning.mybatis.mapper;
 
 import java.util.List;
 
-import javax.annotation.Generated;
-
+import com.enjoylearning.mybatis.entity.TJobHistory;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
-
-import com.enjoylearning.mybatis.entity.TJobHistory;
 
 public interface TJobHistoryAnnoMapper {
 	

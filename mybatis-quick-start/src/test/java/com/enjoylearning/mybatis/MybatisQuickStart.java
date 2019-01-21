@@ -3,6 +3,7 @@ package com.enjoylearning.mybatis;
 import java.io.IOException;
 import java.io.InputStream;
 
+import com.enjoylearning.mybatis.entity.TUser;
 import com.enjoylearning.mybatis.mapper.TUserMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.ExecutorType;
@@ -11,8 +12,6 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Before;
 import org.junit.Test;
-
-import com.enjoylearning.mybatis.entity.TUser;
 
 /**
  * SqlSessionFactoryBuilder：读取配置信息创建SqlSessionFactory，建造者模式，方法级别生命周期；

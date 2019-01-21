@@ -1,4 +1,4 @@
-package com.enjoylearning.mybatis.entity;
+package com.tjl.mybatis.entity;
 
 import java.io.Serializable;
 import java.util.List;
@@ -26,18 +26,6 @@ public class TUser implements Serializable{
 
     
     private List<TRole> roles;
-/*    
-	public TUser(Integer id, String userName) {
-		super();
-		this.id = id;
-		this.userName = userName;
-	}
-	*/
-    
-
-    
-    
-
 
 	public Integer getId() {
         return id;

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="mysqlInterceptor" class="com.tjl.mybatis.interceptor.MysqlInterceptor" init-method="init" lazy-init="false" />
+
+    <!-- mybatis 原生 自定义配置数据类型转换
+    <typeHandlers>
+        <typeHandler handler="com.tjl.mybatis.typehandler.ExampleTypeHandler"/>
+    </typeHandlers>
+    -->
+    <bean id = "exampleTypeHandler" class="com.tjl.mybatis.typehandler.ExampleTypeHandler"></bean>
+
+
+    <!--对象工厂（objectFactory）  mybatis  配置-->
+    <!--<objectFactory type="com.tjl.mybatis.objestfactory.ExampleObjectFactory">
+        <property name="exampleObjectFactory" value="100"/>
+    </objectFactory>-->
+
+    <bean id = "exampleObjectFactory" class="com.tjl.mybatis.objectfactory.ExampleObjectFactory"></bean>
+</beans>

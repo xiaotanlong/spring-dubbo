@@ -21,6 +21,7 @@
         <module>springboot-common-util</module>
         <module>springboot-common-all</module>
         <module>mybatis-quick-start</module>
+        <module>mybatis-spring</module>
     </modules>
 
     <properties>
