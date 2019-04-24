@@ -8,7 +8,7 @@ import com.common.session.UserSession;
 /**
  * @author xiaotantjl@163.com
  * @version V1.0
- * @Description: dubbo 提供者  filter
+ * @Description: dubbo 提供者  filters
  * @date 2018/10/26 11:38
  */
 @Activate(group = { Constants.PROVIDER})

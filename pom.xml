@@ -23,7 +23,6 @@
         <module>mybatis-quick-start</module>
         <module>mybatis-spring</module>
     </modules>
-
     <properties>
         <com.alibaba.dubbo.version>2.6.2</com.alibaba.dubbo.version>
         <commons-lang3.version>2.6.2</commons-lang3.version>
