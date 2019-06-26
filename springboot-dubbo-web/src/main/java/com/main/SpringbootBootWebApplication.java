@@ -29,7 +29,7 @@ import org.springframework.context.annotation.*;
 @SpringBootApplication //只会扫面当钱包下面的注解  所以这里没有扫描到  TestController  下面在增加一个扫描项
 @PropertySource("classpath:application.properties")
 @ImportResource("classpath:/dubbo/dubbo-consume.xml")
-@ComponentScan(value="com.web,com.common")//这里web是业务模块  名做区分
+@ComponentScan(value={"com.web","com.common"})//这里web是业务模块  名做区分
 @Import(value = {WebContextListener.class})
 public class SpringbootBootWebApplication {
 	public static void main(String[] args) {
