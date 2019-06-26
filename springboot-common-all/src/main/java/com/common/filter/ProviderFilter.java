@@ -15,7 +15,7 @@ import com.common.session.UserSession;
 public class ProviderFilter implements Filter {
     @Override
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
-        System.out.println("ProviderFilter set info ----------");
+        System.out.println("ProviderFilter set info -----------");
         String msg = RpcContext.getContext().getAttachment("usersession");
         System.out.println("msg is + " + msg);
         UserSession.set("usersession",msg);
