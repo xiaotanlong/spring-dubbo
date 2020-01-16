@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * @author 0217319
+ * @author xiaotantjl@163.com
  * @version V1.0
  * @Description: mybatis 类型装换(用一句话描述该文件做什么)
  * @date 2018/12/20 11:19

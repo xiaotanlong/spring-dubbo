@@ -7,7 +7,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Properties;
 /**
- * @author 0217319
+ * @author xiaotantjl@163.com
  * @version V1.0
  * @Description: MyBatis 每次创建结果对象实例时,它使用一个 ObjectFactory 实例来完成。
  * @date 2018/12/20 16:53

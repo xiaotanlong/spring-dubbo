@@ -1,12 +1,12 @@
 package com.main;
 
-import com.common.filter.TestFilter;
 import com.common.listener.WebContextListener;
+import com.tjl.filters.RedisSessionFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 /**
  * 后台页面服务
@@ -31,17 +31,26 @@ import org.springframework.context.annotation.*;
 @ImportResource("classpath:/dubbo/dubbo-consume.xml")
 @ComponentScan(value={"com.web","com.common"})//这里web是业务模块  名做区分
 @Import(value = {WebContextListener.class})
+@EnableRedisHttpSession(maxInactiveIntervalInSeconds = 86400*30)
 public class SpringbootBootWebApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootBootWebApplication.class, args);
 	}
 
-	@Bean
+	/*@Bean
 	public FilterRegistrationBean testFilterRegistration() {
 		FilterRegistrationBean registration = new FilterRegistrationBean(new TestFilter());
 		registration.addUrlPatterns("/*"); //
 		registration.addInitParameter("paramName", "paramValue"); //
 		registration.setName("testFilter");
+		return registration;
+	}*/
+	@Bean
+	public FilterRegistrationBean redisSessionFilter() {
+		FilterRegistrationBean registration = new FilterRegistrationBean(new RedisSessionFilter());
+		registration.addUrlPatterns("/*"); //
+		registration.addInitParameter("paramName", "paramValue"); //
+		registration.setName("redisSessionFilter");
 		return registration;
 	}
 }
