@@ -26,7 +26,7 @@
     <properties>
         <com.alibaba.dubbo.version>2.6.2</com.alibaba.dubbo.version>
         <commons-lang3.version>2.6.2</commons-lang3.version>
-        <org.apache.zookeeper.version>3.4.6</org.apache.zookeeper.version>
+        <org.apache.zookeeper.version>3.4.14</org.apache.zookeeper.version>
         <com.github.sgroschupf.zkclient.version>0.1</com.github.sgroschupf.zkclient.version>
         <spring.version>4.3.17.RELEASE</spring.version>
         <curator.version>2.12.0</curator.version>
